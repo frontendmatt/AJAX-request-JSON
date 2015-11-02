@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+        <title>AJAX request JSON</title>
+    </head>
+      <body>
+        <script src="ajax.js"></script>
+          <script>
+            app.ajax('file.json', function(data, xmlhttp) {
+                data = JSON.parse(data);
+                document.write(data.name + ' and ' + data.name2 + ' are all about that green ');
+            }, function(error, xmlhttp){
+                console.log('Error: ', error);
+            });
+
+          </script>
+      </body>
+  </html>
